@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Restaurant Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel='stylesheet' href='/stylesheets/bootstrap.css' />
+    
+    <link rel="stylesheet" href="/bower_components/bootstrap-4.4.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/carousel.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/bower_components/fontawesome/css/all.css">
+    <link rel="stylesheet" href="/bower_components/fontawesome/css/all.min.css">
+  </head>
+  <body >
+    <header>
+    <nav class="navbar fixed-top navbar-dark navbar-expand-md  bg-success text-white">
+        <a class="text-white navbar-brand warning" href="/">
+            <i class="fas fa-store"></i><i style="font-size: larg;"> Foods Store</i>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navberCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">
+
+            </span>
+
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class=" navbar-nav mr-auto menue">
+                <li class="nav-item active">
+                    <a href="/" class="nav-link "><i class="fa fa-home"> </i>
+                        Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="#products" class="nav-link "><i class="  fa fa-utensils"> </i>
+
+                        Products</a>
+                </li>
+
+
+            </ul>
+            
+            <form class="form-inline mt-2 mt-md-0" action="">
+                <a href="/cart" class="text-white nav-link">
+                    <i class="text-warning fas fa-shopping-cart">
+
+                    </i>
+                    <i> Shopping Cart</i> <span class="badge badge-pill badge-warning" >{{totalquantity}}</span> <i style="color: yellow; " id="cart_n"></i>
+                </a>
+
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white " href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="text-warning far fa-user"></i>
+                        <i>User-Administrator</i>
+                    </a>
+                    <div class="dropdown-menu  border border-warning" aria-labelledby="navbarDropdown">
+                        {{#if chekuser}}
+                         {{#if checkprofile}}
+                            <a class="  dropdown-item" href="/users/logout"><i class="text-warning fas fa-sign-out-alt"></i> Log Out</a>
+                         {{else}}
+                            <a class="dropdown-item" href="users/profile"><i class="text-warning fas fa-address-card"></i> Profile</a>
+                         <a class="dropdown-item" href="/users/logout"><i class="text-warning fas fa-sign-out-alt"></i> Log Out</a>
+                         {{/if}}
+                         
+                        {{else}}
+                         <a class="dropdown-item" href="/users/signup"> <i class="text-warning fas fa-user-plus"></i> Sign Up</a>
+                         <a class="  dropdown-item" href="/users/signin"><i class="text-warning fas fa-sign-in-alt"></i>  Sign In</a>
+                        {{/if}}
+                        
+                        
+                        
+                        
+                    </div>
+                </div>
+
+
+
+            </form>
+        </div>
+
+
+
+
+
+    </nav>
+</header>
+   
+    
+     
+           {{{body}}}
+           <div class="container">
+        <footer >
+          <hr class="border border-black " >
+         <p class="float-right">
+             <a href="#">TOP</a>
+
+         </p>
+         <div class=" row float-left" style="padding-left: 13px;">
+             MOHAMED ALI - YOUTUBE CHANNEL
+         </div>
+
+
+        </footer>
+    </div>
+
+   
+     
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/popperjs/core/dist/umd/popper.min.js"></script>
+   <script src="/bower_components/bootstrap-4.4.1/dist/js/bootstrap.min.js"></script>
+   
+   <script src="/bower_components/sweetalert2/dist/sweetalert2.all.min.js"></script>
+   
+  </body>
+</html>

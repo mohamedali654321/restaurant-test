@@ -1,0 +1,56 @@
+<div class="container marketing" style="padding-top: 40px;">
+
+
+    <div class="row">
+
+        <div class="col-md-4 offset-md-4">
+
+
+            <h2 class="text-center">Sign IN</h2>
+            {{#each errorMasseges}}
+            <div class="alert alert-danger alert-dismissible fade show mt-2 auto-hide" role="alert">
+            <p>{{this}}</p>
+
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+            
+            {{/each}}
+           
+            <form action="signin" method="post" >
+                <div class="border border-warning p-3">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" placeholder="Enter Your Email" class="form-control">
+
+
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" placeholder="Enter Your Password" class="form-control">
+
+
+                    </div>
+
+                    
+
+                </div>
+                <div><input type="hidden" name="_csrf" value="{{token}}"></div>
+                   
+                <div class="form-group " style="padding-top: 10px;">
+                    <button type="submit" class="btn btn-primary">Sign In</button> <a href="/users/signup">Create New Accont?</a>
+
+                </div>
+
+
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+</div>

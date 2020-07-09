@@ -1,0 +1,14 @@
+.imgFilter{
+    filter: brightness(0.20);
+}
+.card .card-title{
+    font-size: 20px;
+}
+
+.price{
+    font-weight: 30px;
+    padding-top: 5px;
+}
+.row{
+    padding-top: 12px;
+}

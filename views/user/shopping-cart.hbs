@@ -1,0 +1,89 @@
+
+
+    
+
+    
+
+{{#if products}}
+<div class="container mt-3" style="padding-top: 40px;">
+    
+
+    <main>
+        <div class="row">
+
+            <div class="col">
+
+                <div class="table responsive sm">
+                    <table class="table table-border">
+                        <thead>
+                            <tr class="bg btn-success">
+                                <th scope="col" class="text-white text-center">#</th>
+                                <th scope="col" class="text-white text-center">Product</th>
+
+                                <th scope="col" class="text-white text-center">Quantity</th>
+                                <th scope="col" class="text-white text-center">Price</th>
+                                <th scope="col"></th>
+                                
+
+
+                            </tr>
+                        </thead>
+
+
+                        <tbody id="table">
+                            {{#each products.selectedProduct as |val index|}}
+
+
+                            <tr>
+                                <td scope="col" class="text-center">{{index}} </td>
+                                <td scope="col" class="text-center">{{val.name}}</td>
+                                <td scope="col" class="text-center">
+                                    
+                                    <a href="/minus/{{index}}" class="btn text-danger text-center " style="margin-right: 20px;"><i class="fas fa-minus-square"></i></a>
+                                    {{val.quantity}}
+                                    <a href="/pluse/{{index}}" class="btn text-success " style="margin-left: 20px;"><i class="fas fa-plus-square"></i></a>
+                                    </td>
+                                <td scope="col" class="text-center  ">{{val.price}}</td>
+                                <td  scope="col" class="text-center float-right  "><a href="/delete/{{index}}" class="btn btn-danger">Delete <i class="fas fa-trash-alt"></i></a></td>
+                            </tr>
+                            {{/each}}
+                        </tbody>
+
+                        <tr class="btn-warning">
+                            <td colspan="3" style="font-weight: bold;">Total Price</td>
+                            <td  class="text-center"style="font-weight: bold;">{{products.totalPrice}}$</td>
+                        </tr>
+
+
+
+                    </table>
+
+
+                               
+                </div>
+                <div class="text-center">
+                <a href="/checkout" class="btn btn-success text-white" style="width: 200px;">Check Out   </a>
+                </div>
+            </div>
+
+        </div>
+
+
+        
+        
+        
+    </main>
+
+
+</div>
+{{else}}
+<div class="container marketing">
+    <div class="text-center" style="padding-top: 50px;">
+      <h1 style="text-transform: uppercase;"> Your Shopping-Cart  Is Empty ,Please Insert Products</h1>
+      <br>
+      
+      <a href="/" class="btn btn-success btn-block">Products</a>
+      
+      </div>
+</div>
+{{/if}}

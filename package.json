@@ -1,0 +1,38 @@
+{
+  "name": "Pizza-Store",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    
+    "start": "node app.js "
+  },
+  "dependencies": {
+    "@types/passport": "^1.0.3",
+    "bcrypt": "^4.0.1",
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "~1.4.4",
+    "csurf": "^1.11.0",
+    "debug": "~2.6.9",
+    "decrypt": "0.0.1",
+    "express": "~4.16.1",
+    "express-handlebars": "^4.0.3",
+    "express-session": "^1.17.0",
+    "express-validator": "^6.4.0",
+    "hbs": "^4.1.1",
+    "http-errors": "~1.6.3",
+    "jquery": "^3.5.0",
+    "mongoose": "^5.9.7",
+    "morgan": "~1.9.1",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/connect-flash": "0.0.35",
+    "nodemon": "^2.0.3"
+  },
+  "engines": {
+    "node": "12.16.1",
+    "npm": "6.13.4"
+  }
+}
